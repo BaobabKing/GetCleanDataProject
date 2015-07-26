@@ -48,4 +48,5 @@ dataTidy <- dcast(dataMelt, subject + activity ~ variable, mean)  ## wide form
 
 ## Write dataTidy to file
 message("writing tidy data to file ...")
-write.csv(dataTidy, "dataTidy.csv", row.names=FALSE)
+#write.csv(dataTidy, "dataTidy.csv", row.names=FALSE)
+write.table(dataTidy, "dataTidy.txt", row.names=FALSE)
